@@ -1,0 +1,43 @@
+###############################################
+### Config Explanation
+###############################################
+# Open-GUI-Block --> If a player right clicks that block the HatGUI will open
+# GUI:
+#   Name --> Name of the GUI... Appears in the top left of the menu
+#   Rows --> Every row counts as 9 slots.
+# Items:
+#   <anything_here>:
+#     Slot --> Slot to place the item (In Hats GUI the slots do not start at 0... So count slots from left to right starting at 1)
+#     Name --> Name of the Item
+#     Material --> What item should be in the Slot
+#     Lore --> Should the item have lore? remove this if you dont want lore on your item.
+
+Open-GUI-Block: WOOL
+GUI:
+  Name: "Hats GUI"
+  Rows: 3
+Items:
+  grass_hat:
+    Slot: 11
+    Name: "Grass Hat"
+    Material: GRASS
+    Lore:
+      - "Get a grass hat!"
+  diamond_hat:
+    Slot: 11
+    Name: "Diamond Hat"
+    Material: DIAMOND_BLOCK
+    Lore:
+      - "Be the envy of all your friends"
+  Walking_Lanter:
+    Slot: 11
+    Name: "Have a light source wherever you go!"
+    Material: GLOWSTONE
+    Lore:
+      - "Become a light!"
+      - "And rule the night!"
+  obsidian:
+    Slot: 11
+    Name: "Indestructile Head"
+    Material: OBSIDIAN
+  

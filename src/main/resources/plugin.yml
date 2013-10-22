@@ -1,0 +1,10 @@
+name: Hats GUI
+main: org.goblom.hatsgui.HatsGUI
+author: Goblom
+description: click a blick specified in config and bring up a hat menu.
+version: 0.5
+
+commands:
+  hatgui:
+    usage: /<command>
+    description: Brings up Hats GUI without having to click the block.
