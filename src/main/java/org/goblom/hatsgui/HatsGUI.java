@@ -1,4 +1,3 @@
-
 package org.goblom.hatsgui;
 
 import java.util.ArrayList;
@@ -26,7 +25,9 @@ public class HatsGUI extends JavaPlugin {
     public void onEnable() {
         instance = this;
         plugin = this;
-        util = new Util(this); 
+        util = new Util(this);
+        saveDefaultConfig();
+        
         setupGUI();
         
         getCommand("hatsgui").setExecutor(new HatsGUICommand(this));
