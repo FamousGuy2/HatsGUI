@@ -2,7 +2,7 @@ name: Hats GUI
 main: org.goblom.hatsgui.HatsGUI
 author: Goblom
 description: click a blick specified in config and bring up a hat menu.
-version: 0.5
+version: 1.0
 
 commands:
   hatgui:

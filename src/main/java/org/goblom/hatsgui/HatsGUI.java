@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import java.util.List;
 import org.bukkit.Material;
 import org.bukkit.configuration.file.FileConfiguration;
+import org.bukkit.event.HandlerList;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.goblom.hatsgui.util.Util;
 
 /**
  *
@@ -17,11 +19,14 @@ public class HatsGUI extends JavaPlugin {
 
     private HatsGUI instance;
     private JavaPlugin plugin;
+    
     private IconMenu iconMenu;
+    private Util util;
     
     public void onEnable() {
         instance = this;
         plugin = this;
+        util = new Util(this); 
         setupGUI();
         
         getCommand("hatsgui").setExecutor(new HatsGUICommand(this));
@@ -29,16 +34,13 @@ public class HatsGUI extends JavaPlugin {
     }
     
     public void onDisable() {
-        
+        destroyGUI();
+        HandlerList.unregisterAll(this);
     }
     
-    public HatsGUI getInstance() {
-        return instance;
-    }
-    
-    public JavaPlugin getPlugin() {
-        return plugin;
-    }
+    public HatsGUI getInstance() { return instance; }
+    public JavaPlugin getPlugin() { return plugin; }
+    public Util getUtil() { return util; }
     
     private String getGUITitle() {
         String title = null;

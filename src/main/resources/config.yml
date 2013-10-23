@@ -1,7 +1,14 @@
 ###############################################
 ### Config Explanation
 ###############################################
-# Open-GUI-Block --> If a player right clicks that block the HatGUI will open
+# Settings:
+#   Item:
+#     Material --> If a player right clicks that block in the inventory the HatGUI will open
+#     Data-Value --> Data value of the item.... Works like "WOOL:14" but without the "WOOL:" [This can be removed if you dont want a data value]
+#     Name --> Custom Item Name
+#     Lore --> Add lore to item [this can be removed if you dont want lore]
+#     Glow --> Does the Hats GUI Item glow ? True = yes... False = no.
+#   Give-On-Login --> If true and a player with "Hats.Use" logs in we give them the block. If false everyone gets the item on login. [still requires perms to use it though]
 # GUI:
 #   Name --> Name of the GUI... Appears in the top left of the menu
 #   Rows --> Every row counts as 9 slots.
@@ -12,7 +19,14 @@
 #     Material --> What item should be in the Slot
 #     Lore --> Should the item have lore? remove this if you dont want lore on your item.
 
-Open-GUI-Block: WOOL
+Settings:
+  Item:
+    Material: WOOL
+    Data-Value: 14
+    Name: "Hats GUI"
+    Lore: "Select your hat with a beautiful GUI"
+    Glow: true
+  Give-On-Login: true
 GUI:
   Name: "Hats GUI"
   Rows: 3
