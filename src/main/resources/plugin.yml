@@ -5,6 +5,6 @@ description: click a blick specified in config and bring up a hat menu.
 version: 1.0
 
 commands:
-  hatgui:
+  hatsgui:
     usage: /<command>
     description: Brings up Hats GUI without having to click the block.
