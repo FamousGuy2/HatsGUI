@@ -21,9 +21,14 @@ public class HatsGUICommand implements CommandExecutor {
                 if (player.hasPermission("Hats.Use")) {
                     plugin.hatsGUI().open(player);
                     return true;
+                } else {
+                    player.sendMessage("You dont have permissions to do that");
+                    return true;
                 }
-            } else sender.sendMessage("Only players can do this!");
-            return false;
+            } else {
+                sender.sendMessage("Only players can do this!");
+                return false;
+            }
         }
         return false;
     }
